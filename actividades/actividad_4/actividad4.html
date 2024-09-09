@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+<!-- Título de la página que aparece en la pestaña del navegador -->
+<title>Operaciones</title>
+</head>
+<body>
+  <!-- Título principal de la página -->
+  <h1>A Calcular</h1>
+  
+  <!-- Campo de entrada para el primer número -->
+  <input type="number" id="numeros1" placeholder="Número 1" />
+  
+  <!-- Menú desplegable para seleccionar la operación matemática -->
+  <select id="operacion">
+    <option value="+">+</option> <!-- Opción para sumar -->
+    <option value="-">-</option> <!-- Opción para restar -->
+    <option value="*">*</option> <!-- Opción para multiplicar -->
+    <option value="/">/</option> <!-- Opción para dividir -->
+  </select>
+  
+  <!-- Campo de entrada para el segundo número -->
+  <input type="number" id="numeros2" placeholder="Número 2" />
+  
+  <!-- Botón que llama a la función 'calcular' cuando se hace clic -->
+  <button onclick="calcular()">Calcular</button>
+  
+  <!-- Área para mostrar el resultado del cálculo -->
+  <p id="resultado"></p>
+
+  <!-- Incluye el archivo JavaScript que contiene la lógica del cálculo -->
+  <script src="./js/Script4.js"></script>
+</body>
+</html>

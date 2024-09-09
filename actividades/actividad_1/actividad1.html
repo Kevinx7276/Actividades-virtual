@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="" />
+  <title>Viajar con Suerte</title>
+</head>
+<body>
+  <!-- Título principal visible en la página -->
+  <h1 id="titulo1">URL Aleatoria</h1>
+
+  <!-- Contenedor para el enlace que activa la función JavaScript -->
+  <div>
+    <!-- Enlace que llama a la función JavaScript cuando se hace clic -->
+    <a href="javascript:viajarConSuerte();" title="Viajando con suerte">
+      Pulsa aquí para probar suerte
+    </a>
+  </div>
+
+  <!-- Bloque de código JavaScript que define la función viajarConSuerte -->
+  <script>
+    // Define la función viajarConSuerte
+    function viajarConSuerte() {
+      // Genera un número decimal aleatorio entre 0 y 10
+      var x = Math.random() * 10;
+      
+      // Variable para almacenar la URL a la que se redirigirá el usuario
+      var URL;
+
+      // Comienza una serie de condiciones para determinar qué URL asignar
+      if (x <= 3) {
+        // Si x es menor o igual a 3, asigna la URL de Hotmail
+        URL = 'https://www.hotmail.com/';
+      } else if (x <= 6) {
+        // Si x es mayor a 3 y menor o igual a 6, asigna la URL de Gmail
+        URL = 'https://www.gmail.com/';
+      } else {
+        // Si x es mayor a 6, asigna la URL de Yahoo
+        URL = 'https://www.yahoo.com/';
+      }
+
+      // Redirige al usuario a la URL asignada
+      location.assign(URL);
+    }
+  </script>
+</body>
+</html>
